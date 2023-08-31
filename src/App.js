@@ -20,6 +20,7 @@ function App() {
     });
   }, []);
 
+
   return (
     // BEM
     <div className="app">
@@ -27,6 +28,7 @@ function App() {
         {videos.map(
           ({ url, channel, description, song, likes, messages, shares }) => (
             <Video
+              key={url}
               url={url}
               channel={channel}
               song={song}
